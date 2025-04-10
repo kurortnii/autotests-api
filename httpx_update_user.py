@@ -38,8 +38,8 @@ update_user_payload = {
   "middleName": "Senior AQA + SDET"
 }
 
-update_response = httpx.patch(f"http://localhost:8000/api/v1/users/{user_response_data["user"]["id"]}", json=update_user_payload, headers=headers)
-update_response_data = update_response.json()
+update_user_response = httpx.patch(f"http://localhost:8000/api/v1/users/{user_response_data["user"]["id"]}", json=update_user_payload, headers=headers)
+update_user_response_data = update_user_response.json()
 
-pprint.pp(update_response_data)
+pprint.pp(update_user_response_data)
 
