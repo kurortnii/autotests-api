@@ -4,12 +4,14 @@ from httpx import Client
 
 from clients.authentication.authentication_client import get_authentication_client, LoginRequestDict
 
+
 class AutheticationUserDict(TypedDict):
     """
     структура данных пользователя для авторизации
     """
     email: str
     password: str
+
 
 # создаем private builder
 def get_private_http_client(user: AutheticationUserDict) -> Client:

@@ -57,7 +57,8 @@ create_exercise_request = CreateExerciseRequest(
     maxScore=100,
     minScore=0,
     description='Описание первого задания',
-    estimatedTime='30 минут'
+    estimatedTime='30 минут',
+    orderIndex=5
 )
 create_exercise_response = exercise_client.create_exercise(create_exercise_request)
 print('Create exercise data', create_exercise_response)
