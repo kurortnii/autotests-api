@@ -1,11 +1,11 @@
-from typing import TypedDict
-
 from httpx import Client
+from pydantic import BaseModel
 
-from clients.authentication.authentication_client import get_authentication_client, LoginRequestDict
+from clients.authentication.authentication_client import get_authentication_client
+from clients.authentication.authentication_schema import LoginRequestSchema
 
 
-class AutheticationUserDict(TypedDict):
+class AuthenticationUserSchema(BaseModel):
     """
     структура данных пользователя для авторизации
     """
@@ -14,7 +14,7 @@ class AutheticationUserDict(TypedDict):
 
 
 # создаем private builder
-def get_private_http_client(user: AutheticationUserDict) -> Client:
+def get_private_http_client(user: AuthenticationUserSchema) -> Client:
     """
     функция создает экземпляр httpx.Client с аутентификацией пользователя
     :param user: объект AuthenticationUserSchema с email и паролем пользователя
@@ -24,12 +24,12 @@ def get_private_http_client(user: AutheticationUserDict) -> Client:
     authentication_client = get_authentication_client()
 
     # инициализируем запрос на аутентификацию
-    login_request = LoginRequestDict(email=user['email'], password=user['password'])
+    login_request = LoginRequestSchema(email=user.email, password=user.password)
     # выполняем POST запрос и аутентифицируемся
     login_response = authentication_client.login(login_request)
 
     return Client(
         timeout=100,
         base_url="http://localhost:8000",
-        headers={"Authorization": f"Bearer {login_response['token']['accessToken']}"}
+        headers={"Authorization": f"Bearer {login_response.token.access_token}"}
     )
