@@ -1,27 +1,23 @@
-from pydantic import BaseModel
-from pprint import pprint
+from jsonschema import validate, ValidationError
 
+# пример схемы
+schema = {
+    "type": "object",
+    "properties": {
+        "name": {"type": "string"},
+        "age": {"type": "number"}
+    },
+    "required": ["name"]
+}
 
-class Address(BaseModel):
-    city: str
-    zip_code: str
+# пример данных
+data = {
+    "name": "john doe",
+    "age": "30"
+}
 
-
-class User(BaseModel):
-    id: int
-    name: str
-    email: str
-    is_active: bool = True
-    address: Address
-
-
-user = User(
-    id="123",
-    name='Alice',
-    email='alice@example.com',
-    address={"city": "New York", "zip_code": "10001"}
-)
-pprint(user.address.city)
-
-
-# print('Hello PyCharm!')
+try:
+    validate(instance=data, schema=schema)
+    print("данные соответствуют схеме")
+except ValidationError as error:
+    print('ошибка валидации:', error.message)
