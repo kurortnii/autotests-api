@@ -4,7 +4,7 @@ from clients.api_client import APIClient
 from clients.files.files_schema import FileSchema
 from clients.private_http_builder import AuthenticationUserSchema, get_private_http_client
 from clients.users.users_schema import UserSchema
-from clients.courses.courses_schema import (GetCoursesQueryDictSchema, CreateCourseRequestSchema,
+from clients.courses.courses_schema import (GetCoursesQuerySchema, CreateCourseRequestSchema,
                                             UpdateCourseRequestSchema, CreateCourseResponseSchema)
 
 
@@ -13,13 +13,13 @@ class CoursesClient(APIClient):
     клиент для работы с /api/v1/courses
     """
 
-    def get_courses_api(self, query: GetCoursesQueryDictSchema) -> Response:
+    def get_courses_api(self, query: GetCoursesQuerySchema) -> Response:
         """
         метод для получения списка курсов
         :param query: словарь с UserId
         :return: ответ сервера в виде объекта httpx.Response
         """
-        return self.get("/api/v1/courses", params=query.model_dump())
+        return self.get("/api/v1/courses", params=query.model_dump(by_alias=True))
 
     def get_course_api(self, course_id: str) -> Response:
         """

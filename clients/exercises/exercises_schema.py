@@ -17,11 +17,13 @@ class ExerciseSchema(BaseModel):
     estimated_time: str = Field(alias='estimatedTime')
 
 
-class GetExercisesQueryRequestSchema(BaseModel):
+class GetExercisesQuerySchema(BaseModel):
     """
     описание структуры запроса на получение списка заданий определенного курса
     """
-    course_id: str
+    model_config = ConfigDict(populate_by_name=True)
+
+    course_id: str = Field(alias='courseId')
 
 
 class CreateExerciseRequestSchema(BaseModel):
