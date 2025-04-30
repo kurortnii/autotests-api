@@ -29,8 +29,8 @@ print('Create file data', create_file_response)
 
 # создаем курс
 create_course_request = CreateCourseRequestSchema(
-    previewFileId=create_file_response.file.id,
-    createdByUserId=create_user_response.user.id
+    preview_file_id=create_file_response.file.id,
+    created_by_user_id=create_user_response.user.id
 )
 
 print(create_course_request)

@@ -15,7 +15,7 @@ public_user_client = get_public_users_client()
 create_user_request = CreateUserRequestSchema()
 create_user_response = public_user_client.create_user(create_user_request)
 
-# инициализируем словарь с данными для аутентификации
+# инициализируем pydentic-объект для аутентификации
 # инициализируем приватные клиенты для создания файла, курса и задания курса
 authentication_user = AuthenticationUserSchema(
     email=create_user_request.email,
@@ -32,8 +32,8 @@ print('Create file data:', create_file_response)
 
 # создаем курс
 create_course_request = CreateCourseRequestSchema(
-    previewFileId=create_file_response.file.id,
-    createdByUserId=create_user_response.user.id
+    preview_file_id=create_file_response.file.id,
+    created_by_user_id=create_user_response.user.id
 )
 create_course_response = course_client.create_course(create_course_request)
 print('Create course data:', create_course_response)
