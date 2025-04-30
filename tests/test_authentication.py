@@ -1,4 +1,5 @@
 from http import HTTPStatus
+import pytest
 
 from clients.users.public_users_client import get_public_users_client
 from clients.authentication.authentication_client import get_authentication_client
@@ -9,6 +10,8 @@ from tools.assertions.authentication import assert_login_response
 from tools.assertions.schema import validate_json_schema
 
 
+@pytest.mark.regression
+@pytest.mark.authentication
 def test_login():
     # инициализируем клиент для создания пользователя
     public_users_client = get_public_users_client()
@@ -16,14 +19,14 @@ def test_login():
 
     # создаем нового пользователя
     create_user_request = CreateUserRequestSchema()
-    create_user_response = public_users_client.create_user(create_user_request)
+    public_users_client.create_user(create_user_request)
 
     # создаем pydantic-объект с данными для аутентификации и выполняем аутентификацию
-    authentication_user = LoginRequestSchema(
+    login_request = LoginRequestSchema(
         email=create_user_request.email,
         password=create_user_request.password
     )
-    login_response = authentication_client.login_api(authentication_user)
+    login_response = authentication_client.login_api(login_request)
     # десериализуем login_response
     login_response_data = LoginResponseSchema.model_validate_json(login_response.text)
 
