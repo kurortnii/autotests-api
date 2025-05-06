@@ -19,11 +19,11 @@ class UserFixture(BaseModel):
         return self.request.email
 
     @property
-    def password(self):
+    def password(self) -> str:
         return self.request.password
 
     @property
-    def authentication_user(self):
+    def authentication_user(self) -> AuthenticationUserSchema:
         return AuthenticationUserSchema(email=self.email,
                                         password=self.password)
 
@@ -51,7 +51,7 @@ def private_users_client(function_user) -> PrivateUsersClient:
 # фикстура для создания пользователя
 # + используем фикстуру public_users_client, которая создает нужный API клиент
 @pytest.fixture
-def function_user(public_users_client):
+def function_user(public_users_client: PublicUsersClient) -> UserFixture:
     request = CreateUserRequestSchema()
     response = public_users_client.create_user(request)
     return UserFixture(request=request, response=response)
