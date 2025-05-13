@@ -1,3 +1,6 @@
+# импортируем функцию для кеширования
+from functools import lru_cache
+
 from httpx import Client
 from pydantic import BaseModel
 
@@ -5,7 +8,7 @@ from clients.authentication.authentication_client import get_authentication_clie
 from clients.authentication.authentication_schema import LoginRequestSchema
 
 
-class AuthenticationUserSchema(BaseModel):
+class AuthenticationUserSchema(BaseModel, frozen=True):
     """
     структура данных пользователя для авторизации
     """
@@ -13,7 +16,8 @@ class AuthenticationUserSchema(BaseModel):
     password: str
 
 
-# создаем private builder
+# создаем private builder и кешируем возвращаемое значение
+@lru_cache(maxsize=None)
 def get_private_http_client(user: AuthenticationUserSchema) -> Client:
     """
     функция создает экземпляр httpx.Client с аутентификацией пользователя
