@@ -17,7 +17,7 @@ class FilesClient(APIClient):
         :param file_id: идентификатор файла
         :return: ответ от сервера в виде объекта httpx.Response
         """
-        return self.get(f"/api/v1/files{file_id}")
+        return self.get(f"/api/v1/files/{file_id}")
 
     def create_file_api(self, request: CreateFileRequestSchema) -> Response:
         """
