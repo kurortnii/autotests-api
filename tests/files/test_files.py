@@ -25,6 +25,7 @@ class TestFiles:
 
         assert_status_code(response.status_code, HTTPStatus.OK)
         assert_create_file_response(request, response_data)
+        # проверяем, что файл доступен по ссылке после создания
         assert_file_is_accessible(str(response_data.file.url))
 
         validate_json_schema(response.json(), response_data.model_json_schema())
@@ -38,7 +39,7 @@ class TestFiles:
 
         validate_json_schema(response.json(), response_data.model_json_schema())
 
-    def test_create_with_empty_filename(self, files_client: FilesClient):
+    def test_create_file_with_empty_filename(self, files_client: FilesClient):
         request = CreateFileRequestSchema(
             filename="",
             upload_file="./testdata/files/image.jpg"
@@ -51,7 +52,7 @@ class TestFiles:
 
         validate_json_schema(response.json(), response_data.model_json_schema())
 
-    def test_create_with_empty_directory(self, files_client: FilesClient):
+    def test_create_file_with_empty_directory(self, files_client: FilesClient):
         request = CreateFileRequestSchema(
             directory="",
             upload_file="./testdata/files/image.jpg"
