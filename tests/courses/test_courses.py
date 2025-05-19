@@ -73,5 +73,5 @@ class TestCourses:
         # проверяем, что данные запроса на создание курса соответствуют данными ответа
         assert_create_course_response(request, response_data)
 
-        # проверяем соответствие JSON-ответе схеме
+        # проверяем соответствие JSON-ответа схеме
         validate_json_schema(response.json(), response_data.model_json_schema())
