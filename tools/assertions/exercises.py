@@ -1,5 +1,6 @@
 from clients.exercises.exercises_schema import (CreateExerciseResponseSchema, CreateExerciseRequestSchema,
-                                                ExerciseSchema, GetExerciseResponseSchema)
+                                                ExerciseSchema, GetExerciseResponseSchema,
+                                                UpdateExerciseRequestSchema, UpdateExerciseResponseSchema)
 
 from tools.assertions.base import assert_equal
 
@@ -44,3 +45,32 @@ def assert_get_exercise_response(get_exercise_request: GetExerciseResponseSchema
                                  create_exercise_response: CreateExerciseResponseSchema):
     assert_exercise(get_exercise_request.exercise, create_exercise_response.exercise)
 
+
+def assert_update_exercise_response(
+        request: UpdateExerciseRequestSchema,
+        response: UpdateExerciseResponseSchema
+):
+    """
+    проверяет, что запрос на обновление упражнения курса соответствует ответу
+
+    :param request: исходный запрос на обновление упражнения курса
+    :param response: ответ API на обновление упражнения курса
+    :raises AssertionError: если хотя бы одно поле не совпадает
+    """
+    if request.title is not None:
+        assert_equal(response.exercise.title, request.title, "title")
+
+    if request.max_score is not None:
+        assert_equal(response.exercise.max_score, request.max_score, "max_score")
+
+    if request.min_score is not None:
+        assert_equal(response.exercise.min_score, request.min_score, "min_score")
+
+    if request.order_index is not None:
+        assert_equal(response.exercise.order_index, request.order_index, "order_index")
+
+    if request.description is not None:
+        assert_equal(response.exercise.description, request.description, "description")
+
+    if request.estimated_time is not None:
+        assert_equal(response.exercise.estimated_time, request.estimated_time, "estimated_time")
