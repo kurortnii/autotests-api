@@ -6,12 +6,14 @@ from clients.errors_schema import InternalErrorResponseSchema
 from clients.exercises.exercises_client import ExerciseClient
 from clients.exercises.exercises_schema import (CreateExerciseRequestSchema, CreateExerciseResponseSchema,
                                                 GetExerciseResponseSchema, UpdateExerciseRequestSchema,
-                                                UpdateExerciseResponseSchema)
+                                                UpdateExerciseResponseSchema, GetExercisesQuerySchema,
+                                                GetExercisesResponseSchema)
 from fixtures.courses import CourseFixture
 from fixtures.exercises import ExerciseFixture
 from tools.assertions.base import assert_status_code
 from tools.assertions.exercises import (assert_create_exercise_response, assert_get_exercise_response,
-                                        assert_update_exercise_response, assert_exercise_not_found_response)
+                                        assert_update_exercise_response, assert_exercise_not_found_response,
+                                        assert_get_exercises_response)
 from tools.assertions.schema import validate_json_schema
 
 
@@ -95,5 +97,24 @@ class TestExercises:
         # проверяем соответствие JSON-ответа схеме
         validate_json_schema(get_response.json(), InternalErrorResponseSchema.model_json_schema())
 
+    def test_get_exercises(
+            self,
+            exercise_client: ExerciseClient,
+            function_exercise: ExerciseFixture,
+            function_course: CourseFixture):
+        # формируем параметры запроса, передавая course_id
+        query = GetExercisesQuerySchema(course_id=function_course.response.course.id)
+        # отправляем GET-запрос на получение списка упражнений
+        response = exercise_client.get_exercises_api(query)
+        # десериализуем JSON-ответ в Pydantic-ответ
+        response_data = GetExercisesResponseSchema.model_validate_json(response.text)
 
+        # проверяем, что статус-код на получение списка упражнений 200
+        assert_status_code(response.status_code, HTTPStatus.OK)
 
+        # проверяем, что ответ запроса на список упражнений соответствует
+        # списку ранее созданых упражнений
+        assert_get_exercises_response(response_data, [function_exercise.response])
+
+        # проверяем соответствие JSON-ответа схеме
+        validate_json_schema(response.json(), GetExercisesResponseSchema.model_json_schema())
