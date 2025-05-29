@@ -28,6 +28,7 @@ class TestAuthentication:
     @allure.story(AllureStory.LOGIN)
     @allure.title("Login with correct email and password")
     @allure.severity(Severity.BLOCKER)
+    @allure.sub_suite(AllureStory.LOGIN)
     def test_login(self,
                    function_user: UserFixture,
                    public_users_client: PublicUsersClient,

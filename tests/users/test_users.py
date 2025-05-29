@@ -41,6 +41,7 @@ class TestUsers:
     @allure.tag(AllureTags.CREATE_ENTITY)
     @allure.story(AllureStory.CREATE_ENTITY)
     @allure.severity(Severity.BLOCKER)
+    @allure.sub_suite(AllureStory.CREATE_ENTITY)
     def test_create_user(self, email: str, public_users_client: PublicUsersClient):
         # формируем тело запроса на создание пользователя
         request = CreateUserRequestSchema(email=fake.email(email))
@@ -61,6 +62,7 @@ class TestUsers:
     @allure.tag(AllureTags.GET_ENTITY)
     @allure.story(AllureStory.GET_ENTITY)
     @allure.severity(Severity.CRITICAL)
+    @allure.sub_suite(AllureStory.GET_ENTITY)
     def test_get_user_me(self, private_users_client: PrivateUsersClient, function_user: UserFixture):
         # отправляем запрос на получение пользователя
         response = private_users_client.get_user_me_api()
