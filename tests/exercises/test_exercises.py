@@ -1,6 +1,8 @@
 from http import HTTPStatus
 
+import allure
 import pytest
+from allure_commons.types import Severity
 
 from clients.errors_schema import InternalErrorResponseSchema
 from clients.exercises.exercises_client import ExerciseClient
@@ -10,6 +12,10 @@ from clients.exercises.exercises_schema import (CreateExerciseRequestSchema, Cre
                                                 GetExercisesResponseSchema)
 from fixtures.courses import CourseFixture
 from fixtures.exercises import ExerciseFixture
+from tools.allure.tags import AllureTags
+from tools.allure.epics import AllureEpic
+from tools.allure.stories import AllureStory
+from tools.allure.features import AllureFeatures
 from tools.assertions.base import assert_status_code
 from tools.assertions.exercises import (assert_create_exercise_response, assert_get_exercise_response,
                                         assert_update_exercise_response, assert_exercise_not_found_response,
@@ -19,7 +25,16 @@ from tools.assertions.schema import validate_json_schema
 
 @pytest.mark.regression
 @pytest.mark.exercises
+@allure.tag(AllureTags.EXERCISES, AllureTags.REGRESSION)
+@allure.epic(AllureEpic.LMS)
+@allure.feature(AllureFeatures.EXERCISES)
+@allure.parent_suite(AllureEpic.LMS)
+@allure.suite(AllureFeatures.EXERCISES)
 class TestExercises:
+    @allure.tag(AllureTags.CREATE_ENTITY)
+    @allure.story(AllureStory.CREATE_ENTITY)
+    @allure.title("Create exercise")
+    @allure.severity(Severity.BLOCKER)
     def test_create_exercise(
             self,
             exercise_client: ExerciseClient,
@@ -39,6 +54,10 @@ class TestExercises:
         # проверяем соответствие JSON-ответа схеме
         validate_json_schema(response.json(), response_data.model_json_schema())
 
+    @allure.tag(AllureTags.GET_ENTITY)
+    @allure.story(AllureStory.GET_ENTITY)
+    @allure.title("Get exercise")
+    @allure.severity(Severity.BLOCKER)
     def test_get_exercise(
             self,
             exercise_client: ExerciseClient,
@@ -56,6 +75,10 @@ class TestExercises:
         # проверяем соответствие JSON-ответа схеме
         validate_json_schema(response.json(), response_data.model_json_schema())
 
+    @allure.tag(AllureTags.UPDATE_ENTITY)
+    @allure.story(AllureStory.UPDATE_ENTITY)
+    @allure.title("Update exercise")
+    @allure.severity(Severity.CRITICAL)
     def test_update_exercise(
             self,
             exercise_client: ExerciseClient,
@@ -75,6 +98,10 @@ class TestExercises:
         # проверяем соответствие JSON-ответа схеме
         validate_json_schema(response.json(), GetExerciseResponseSchema.model_json_schema())
 
+    @allure.tag(AllureTags.DELETE_ENTITY)
+    @allure.story(AllureStory.DELETE_ENTITY)
+    @allure.title("Delete exercise")
+    @allure.severity(Severity.CRITICAL)
     def test_delete_exercise(
             self,
             exercise_client: ExerciseClient,
@@ -97,6 +124,10 @@ class TestExercises:
         # проверяем соответствие JSON-ответа схеме
         validate_json_schema(get_response.json(), InternalErrorResponseSchema.model_json_schema())
 
+    @allure.tag(AllureTags.GET_ENTITIES)
+    @allure.story(AllureStory.GET_ENTITIES)
+    @allure.title("Get exercises")
+    @allure.severity(Severity.BLOCKER)
     def test_get_exercises(
             self,
             exercise_client: ExerciseClient,
