@@ -1,0 +1,11 @@
+curl -X 'POST'\
+  'http://localhost:8000/api/v1/courses'\
+  -H 'host: localhost:8000'\
+  -H 'accept: */*'\
+  -H 'accept-encoding: gzip, deflate'\
+  -H 'connection: keep-alive'\
+  -H 'user-agent: python-httpx/0.28.1'\
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTE2VDEyOjUwOjIwLjU1MzI4NSIsInVzZXJfaWQiOiI4MGVjYTg0Yi05NGM2LTRiNjAtYjZjMi04M2Y5ZDJhMDBmYjQifQ.5GdMoWYho6YFNtpagW3LVeKogbFx3RMEqkDtlSL7NMg'\
+  -H 'content-length: 366'\
+  -H 'content-type: application/json'\
+  -d '{"title":"Deep business sister exist cold let.","maxScore":72,"minScore":3,"description":"Stage despite upon agency campaign around. Admit cultural player alone room. Player others experience section image take administration.","previewFileId":"d91ca171-8d85-4fd5-9c61-04938e4acd80","estimatedTime":"3 weeks","createdByUserId":"80eca84b-94c6-4b60-b6c2-83f9d2a00fb4"}'
