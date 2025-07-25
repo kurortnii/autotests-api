@@ -1,0 +1,12 @@
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:30 Make POST request to http://localhost:8000/api/v1/users
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:40 Got response 200 OK from http://localhost:8000/api/v1/users
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:30 Make POST request to http://localhost:8000/api/v1/authentication/login
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:40 Got response 200 OK from http://localhost:8000/api/v1/authentication/login
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:30 Make POST request to http://localhost:8000/api/v1/files
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:40 Got response 200 OK from http://localhost:8000/api/v1/files
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:30 Make POST request to http://localhost:8000/api/v1/courses
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:40 Got response 200 OK from http://localhost:8000/api/v1/courses
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:30 Make POST request to http://localhost:8000/api/v1/exercises
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:40 Got response 200 OK from http://localhost:8000/api/v1/exercises
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:30 Make GET request to http://localhost:8000/api/v1/exercises?courseId=34a18209-502c-46d2-a0e9-cef4b65db94d
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:40 Got response 200 OK from http://localhost:8000/api/v1/exercises?courseId=34a18209-502c-46d2-a0e9-cef4b65db94d

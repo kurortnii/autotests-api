@@ -1,0 +1,11 @@
+curl -X 'POST'\
+  'http://localhost:8000/api/v1/courses'\
+  -H 'host: localhost:8000'\
+  -H 'accept: */*'\
+  -H 'accept-encoding: gzip, deflate'\
+  -H 'connection: keep-alive'\
+  -H 'user-agent: python-httpx/0.28.1'\
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTI0VDEyOjQzOjExLjg2NjAwMiIsInVzZXJfaWQiOiIxNDcyNzk2MS02ZmZlLTQwOGEtOWU4Ny0zYzI4NWQ5YjM3MGIifQ.tc_ZdRjiFdEc3Je3z6l53MzscLKcMQ7LL6I2pWzLzBM'\
+  -H 'content-length: 366'\
+  -H 'content-type: application/json'\
+  -d '{"title":"Help hundred boy.","maxScore":92,"minScore":12,"description":"But reveal go affect health something tell majority. Hot however Republican more general beyond.\nDo call they million. Seem coach rise certainly society.","previewFileId":"cc65c82f-c80a-4f56-b50b-378b77a21cf0","estimatedTime":"5 weeks","createdByUserId":"14727961-6ffe-408a-9e87-3c285d9b370b"}'

@@ -1,0 +1,11 @@
+curl -X 'POST'\
+  'http://localhost:8000/api/v1/courses'\
+  -H 'host: localhost:8000'\
+  -H 'accept: */*'\
+  -H 'accept-encoding: gzip, deflate'\
+  -H 'connection: keep-alive'\
+  -H 'user-agent: python-httpx/0.28.1'\
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTI0VDEyOjQzOjEwLjgyNzQ3NyIsInVzZXJfaWQiOiI2YjgwYTc0My0wZGQ5LTRjNTYtOTM2My05MTk2YWRkZjhhOWQifQ.JIQQTKkDMaDGRnWfkKugKOyqS-vcu4V8SHYe5BIQQr8'\
+  -H 'content-length: 431'\
+  -H 'content-type: application/json'\
+  -d '{"title":"Without order impact security government.","maxScore":58,"minScore":7,"description":"Office information finish answer others subject. With read since north thousand painting.\nCause wide behavior scene hospital view. Put arrive system foot husband foot law.\nLow hard on thousand.","previewFileId":"0ad173dc-122c-4c06-bb9f-59962b67496c","estimatedTime":"10 weeks","createdByUserId":"6b80a743-0dd9-4c56-9363-9196addf8a9d"}'

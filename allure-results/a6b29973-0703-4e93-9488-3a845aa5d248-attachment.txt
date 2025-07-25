@@ -1,0 +1,11 @@
+curl -X 'POST'\
+  'http://localhost:8000/api/v1/courses'\
+  -H 'host: localhost:8000'\
+  -H 'accept: */*'\
+  -H 'accept-encoding: gzip, deflate'\
+  -H 'connection: keep-alive'\
+  -H 'user-agent: python-httpx/0.28.1'\
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTI0VDEyOjQzOjA5Ljc5OTczMSIsInVzZXJfaWQiOiIzZmNjNWIwMy1mYzI2LTQxMWItOTBhYS0yNTBiNGRlOTNmNTAifQ.1fd6sbpmD5ElsVpGpbjux9mZZfsDfO8RojATjvoHQLg'\
+  -H 'content-length: 367'\
+  -H 'content-type: application/json'\
+  -d '{"title":"Water prevent week conference attack husband.","maxScore":89,"minScore":5,"description":"Want decide tree rather sound. Between serious appear staff parent report. Partner result fight difficult activity loss usually.","previewFileId":"ddf944e9-bd36-47e2-bb99-9dc361aee7b8","estimatedTime":"7 weeks","createdByUserId":"3fcc5b03-fc26-411b-90aa-250b4de93f50"}'

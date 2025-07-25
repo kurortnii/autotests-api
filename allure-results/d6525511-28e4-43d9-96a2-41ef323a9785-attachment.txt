@@ -1,0 +1,11 @@
+curl -X 'POST'\
+  'http://localhost:8000/api/v1/courses'\
+  -H 'host: localhost:8000'\
+  -H 'accept: */*'\
+  -H 'accept-encoding: gzip, deflate'\
+  -H 'connection: keep-alive'\
+  -H 'user-agent: python-httpx/0.28.1'\
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTI0VDEyOjQzOjA5LjI3ODc3NSIsInVzZXJfaWQiOiI0ZWI5Njc2Yi0yNGQ2LTRhNTMtODA1Yi0zZmE1N2M2ZGJlMjcifQ.t3CdniBtmT2unt1xgJgOvcxtxIega7Af6vDQu-ivPmg'\
+  -H 'content-length: 391'\
+  -H 'content-type: application/json'\
+  -d '{"title":"Prove best professor keep stop official tonight.","maxScore":95,"minScore":12,"description":"Able former hear mind. Rather price pay second thought ground management. Goal season second.\nTraditional three ever indeed dog. Rule his marriage.","previewFileId":"0feececd-60bd-423e-a4dd-6971e8587927","estimatedTime":"5 weeks","createdByUserId":"4eb9676b-24d6-4a53-805b-3fa57c6dbe27"}'

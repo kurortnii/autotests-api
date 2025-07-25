@@ -1,0 +1,11 @@
+curl -X 'POST'\
+  'http://localhost:8000/api/v1/courses'\
+  -H 'host: localhost:8000'\
+  -H 'accept: */*'\
+  -H 'accept-encoding: gzip, deflate'\
+  -H 'connection: keep-alive'\
+  -H 'user-agent: python-httpx/0.28.1'\
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTI0VDEyOjQzOjA4LjE5ODkyOCIsInVzZXJfaWQiOiJhNDdlZmZiNi01MzY2LTQ5MzQtYTVhMi1jNzQ5YmNlOGJmNTYifQ.4jjPMJ9jqh_tkKgdxrdYFVts-fXJxgVkehU8p2qxaZw'\
+  -H 'content-length: 318'\
+  -H 'content-type: application/json'\
+  -d '{"title":"Break individual training section bag.","maxScore":57,"minScore":20,"description":"Second until past executive number century. Figure sister law live wonder avoid onto.","previewFileId":"20322e02-e11f-4dec-8801-a430cdf7ca4f","estimatedTime":"4 weeks","createdByUserId":"a47effb6-5366-4934-a5a2-c749bce8bf56"}'

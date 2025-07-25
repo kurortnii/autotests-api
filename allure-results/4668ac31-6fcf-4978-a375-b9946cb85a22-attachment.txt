@@ -1,0 +1,11 @@
+curl -X 'POST'\
+  'http://localhost:8000/api/v1/courses'\
+  -H 'host: localhost:8000'\
+  -H 'accept: */*'\
+  -H 'accept-encoding: gzip, deflate'\
+  -H 'connection: keep-alive'\
+  -H 'user-agent: python-httpx/0.28.1'\
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTI0VDEyOjQzOjExLjM0NjY4MyIsInVzZXJfaWQiOiIwNDc0NjcwZi1kN2M3LTRhOWQtYTM4MS0yYTI0ODQ2ZDQ2YTgifQ.bxQDKTyJ0ECS5pP4nzhqj6DLS5HfWt3RP0ZmB0aLKOM'\
+  -H 'content-length: 296'\
+  -H 'content-type: application/json'\
+  -d '{"title":"Hour official sea leader.","maxScore":81,"minScore":5,"description":"Name condition morning suggest yet glass. Upon agent foot case million among.","previewFileId":"53265323-d06b-45e6-ac0f-f70319f2538a","estimatedTime":"7 weeks","createdByUserId":"0474670f-d7c7-4a9d-a381-2a24846d46a8"}'
