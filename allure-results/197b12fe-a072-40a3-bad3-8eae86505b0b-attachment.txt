@@ -1,0 +1,11 @@
+curl -X 'PATCH'\
+  'http://localhost:8000/api/v1/courses/1ad5a761-687d-4d61-9ca2-7998b11411f1'\
+  -H 'host: localhost:8000'\
+  -H 'accept: */*'\
+  -H 'accept-encoding: gzip, deflate'\
+  -H 'connection: keep-alive'\
+  -H 'user-agent: python-httpx/0.28.1'\
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTI1VDEyOjAyOjAwLjI2NTA2OCIsInVzZXJfaWQiOiJkOTQ0MzI3MC1lZWVkLTRjNDAtOTY0ZS1hMzRhZjAzYWJlODcifQ.tFRxr_nBJf_CqGsg3WUue7TWf_mNeSPlWd478uLcyrY'\
+  -H 'content-length: 320'\
+  -H 'content-type: application/json'\
+  -d '{"title":"Want clear course view gas general tonight.","maxScore":68,"minScore":27,"description":"Career foreign for prepare serve professional. Response north himself near beyond. Wait professor though.\nSize his decide security sell ok. Care five his tough. Outside glass clear control why.","estimatedTime":"8 weeks"}'

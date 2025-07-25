@@ -1,0 +1,20 @@
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:30 Make POST request to http://localhost:8000/api/v1/users
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:40 Got response 200 OK from http://localhost:8000/api/v1/users
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:30 Make POST request to http://localhost:8000/api/v1/authentication/login
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:40 Got response 200 OK from http://localhost:8000/api/v1/authentication/login
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:30 Make POST request to http://localhost:8000/api/v1/files
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:40 Got response 200 OK from http://localhost:8000/api/v1/files
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:30 Make POST request to http://localhost:8000/api/v1/courses
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:40 Got response 200 OK from http://localhost:8000/api/v1/courses
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:30 Make POST request to http://localhost:8000/api/v1/courses
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:40 Got response 200 OK from http://localhost:8000/api/v1/courses
+[32mINFO    [0m BASE_ASSERTIONS:base.py:19 Check that response status code equals to '200'
+[32mINFO    [0m COURSES_ASSERTIONS:courses.py:96 Check create course response
+[32mINFO    [0m BASE_ASSERTIONS:base.py:38 Check that 'title' equals to Let some rather win.
+[32mINFO    [0m BASE_ASSERTIONS:base.py:38 Check that 'max_score' equals to 75
+[32mINFO    [0m BASE_ASSERTIONS:base.py:38 Check that 'min_score' equals to 2
+[32mINFO    [0m BASE_ASSERTIONS:base.py:38 Check that 'description' equals to Strategy finally item most Mr another prove. During seem drive issue compare particular third. Task and improve market great face positive.
+[32mINFO    [0m BASE_ASSERTIONS:base.py:38 Check that 'estimated_time' equals to 10 weeks
+[32mINFO    [0m BASE_ASSERTIONS:base.py:38 Check that 'preview_file_id' equals to 8a97d783-ea55-4659-b8d7-7e1d25d1fbff
+[32mINFO    [0m BASE_ASSERTIONS:base.py:38 Check that 'created_by_user_id' equals to 12dfbf9e-98b8-4b6e-8fd5-07260bf96d54
+[32mINFO    [0m SCHEMA_ASSERTIONS:schema.py:21 Validating JSON schema

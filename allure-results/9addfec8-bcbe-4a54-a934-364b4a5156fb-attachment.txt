@@ -1,0 +1,11 @@
+curl -X 'POST'\
+  'http://localhost:8000/api/v1/courses'\
+  -H 'host: localhost:8000'\
+  -H 'accept: */*'\
+  -H 'accept-encoding: gzip, deflate'\
+  -H 'connection: keep-alive'\
+  -H 'user-agent: python-httpx/0.28.1'\
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTI1VDEyOjAyOjAxLjM0ODYwNyIsInVzZXJfaWQiOiI3MDUyMDUzNC1jNGE2LTQyYjAtYjkyNi00MmUzMWNlNzcwMDEifQ.MMtApfp2j-gCohie6e1S_0mwUSgFK5vg-Ix2CdE_LZ4'\
+  -H 'content-length: 441'\
+  -H 'content-type: application/json'\
+  -d '{"title":"Federal certainly alone avoid education word test store.","maxScore":61,"minScore":23,"description":"Understand individual about soldier nature yourself. Meeting color western require. Administration could car drop.\nRole fight quality free artist ready. Finally church anything throw local.","previewFileId":"d2fb703b-3868-4e39-9d89-93c554f5b9ec","estimatedTime":"1 weeks","createdByUserId":"70520534-c4a6-42b0-b926-42e31ce77001"}'

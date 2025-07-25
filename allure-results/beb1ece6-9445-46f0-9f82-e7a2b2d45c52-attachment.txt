@@ -1,0 +1,32 @@
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:30 Make POST request to http://localhost:8000/api/v1/users
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:40 Got response 200 OK from http://localhost:8000/api/v1/users
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:30 Make POST request to http://localhost:8000/api/v1/authentication/login
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:40 Got response 200 OK from http://localhost:8000/api/v1/authentication/login
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:30 Make POST request to http://localhost:8000/api/v1/files
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:40 Got response 200 OK from http://localhost:8000/api/v1/files
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:30 Make POST request to http://localhost:8000/api/v1/courses
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:40 Got response 200 OK from http://localhost:8000/api/v1/courses
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:30 Make GET request to http://localhost:8000/api/v1/courses?userId=d04b7840-1efd-4b8d-a0ee-2afea4d26737
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:40 Got response 200 OK from http://localhost:8000/api/v1/courses?userId=d04b7840-1efd-4b8d-a0ee-2afea4d26737
+[32mINFO    [0m BASE_ASSERTIONS:base.py:19 Check that response status code equals to '200'
+[32mINFO    [0m COURSES_ASSERTIONS:courses.py:79 Check get course response
+[32mINFO    [0m BASE_ASSERTIONS:base.py:73 Check that length of courses equals to 1
+[32mINFO    [0m COURSES_ASSERTIONS:courses.py:53 Check course
+[32mINFO    [0m BASE_ASSERTIONS:base.py:38 Check that 'id' equals to a7214398-724a-4313-b3f3-22bf989a7fd1
+[32mINFO    [0m BASE_ASSERTIONS:base.py:38 Check that 'title' equals to Arrive word animal plant.
+[32mINFO    [0m BASE_ASSERTIONS:base.py:38 Check that 'max_score' equals to 69
+[32mINFO    [0m BASE_ASSERTIONS:base.py:38 Check that 'min_score' equals to 2
+[32mINFO    [0m BASE_ASSERTIONS:base.py:38 Check that 'description' equals to Hospital nation toward our sometimes sit although kid. Add hundred meeting create. Often body hot across.
+[32mINFO    [0m BASE_ASSERTIONS:base.py:38 Check that 'estimated_time' equals to 10 weeks
+[32mINFO    [0m FILES_ASSERTIONS:files.py:58 Check file
+[32mINFO    [0m BASE_ASSERTIONS:base.py:38 Check that 'id' equals to 3879a16b-a55d-44d5-a1ed-1ffe7e596d75
+[32mINFO    [0m BASE_ASSERTIONS:base.py:38 Check that 'url' equals to http://localhost:8000/static/tests/7a36b416-bf22-46c3-bcc4-5f751b73a30b.png
+[32mINFO    [0m BASE_ASSERTIONS:base.py:38 Check that 'filename' equals to 7a36b416-bf22-46c3-bcc4-5f751b73a30b.png
+[32mINFO    [0m BASE_ASSERTIONS:base.py:38 Check that 'directory' equals to tests
+[32mINFO    [0m USER_ASSERTIONS:users.py:36 Check user
+[32mINFO    [0m BASE_ASSERTIONS:base.py:38 Check that 'id' equals to d04b7840-1efd-4b8d-a0ee-2afea4d26737
+[32mINFO    [0m BASE_ASSERTIONS:base.py:38 Check that 'email' equals to edward77@example.com
+[32mINFO    [0m BASE_ASSERTIONS:base.py:38 Check that 'last_name' equals to Ali
+[32mINFO    [0m BASE_ASSERTIONS:base.py:38 Check that 'first_name' equals to Marisa
+[32mINFO    [0m BASE_ASSERTIONS:base.py:38 Check that 'middle_name' equals to Katie
+[32mINFO    [0m SCHEMA_ASSERTIONS:schema.py:21 Validating JSON schema

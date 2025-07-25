@@ -1,0 +1,11 @@
+curl -X 'POST'\
+  'http://localhost:8000/api/v1/courses'\
+  -H 'host: localhost:8000'\
+  -H 'accept: */*'\
+  -H 'accept-encoding: gzip, deflate'\
+  -H 'connection: keep-alive'\
+  -H 'user-agent: python-httpx/0.28.1'\
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTI1VDExOjMyOjI5LjI2ODgyMSIsInVzZXJfaWQiOiJkOGNhNWExMS1lZjg1LTRlNjctODc2OC0xYmZkM2E0ZGM1OWUifQ.Nc8jaIZcag60hFCW6I_jJ_-pAZFdwa9wcRq_51lb2q8'\
+  -H 'content-length: 368'\
+  -H 'content-type: application/json'\
+  -d '{"title":"Their husband drop western left practice national.","maxScore":84,"minScore":11,"description":"Around idea Mrs know. During something skill fire voice blue cover west. Society sister central however.\nHouse bank least.","previewFileId":"932c0652-a354-4c6a-a09f-79458aa57ffb","estimatedTime":"3 weeks","createdByUserId":"d8ca5a11-ef85-4e67-8768-1bfd3a4dc59e"}'

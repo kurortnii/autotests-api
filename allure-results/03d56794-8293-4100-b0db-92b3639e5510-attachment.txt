@@ -1,0 +1,11 @@
+curl -X 'POST'\
+  'http://localhost:8000/api/v1/exercises'\
+  -H 'host: localhost:8000'\
+  -H 'accept: */*'\
+  -H 'accept-encoding: gzip, deflate'\
+  -H 'connection: keep-alive'\
+  -H 'user-agent: python-httpx/0.28.1'\
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTI1VDExOjM0OjAxLjE2MzA1NyIsInVzZXJfaWQiOiI5MTkxYmY0Ni01ZTRjLTQ0MWUtOTA2Ny0yMmE3Y2FmZDk1NTkifQ.wWqj_zUfsBcydHTPLQwFofqr4xbX74G3ujXqq-PBhCM'\
+  -H 'content-length: 345'\
+  -H 'content-type: application/json'\
+  -d '{"title":"Mrs trial more money.","courseId":"241ad67a-6e98-4630-9b36-f0cbd964ad97","maxScore":96,"minScore":25,"orderIndex":97,"description":"Arrive people current man. Either man before personal.\nShoulder couple resource buy yard major. Enter rich soon board represent. Analysis improve discover chance current who.","estimatedTime":"6 weeks"}'

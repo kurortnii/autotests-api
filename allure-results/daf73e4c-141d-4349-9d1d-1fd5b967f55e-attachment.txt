@@ -1,0 +1,11 @@
+curl -X 'POST'\
+  'http://localhost:8000/api/v1/courses'\
+  -H 'host: localhost:8000'\
+  -H 'accept: */*'\
+  -H 'accept-encoding: gzip, deflate'\
+  -H 'connection: keep-alive'\
+  -H 'user-agent: python-httpx/0.28.1'\
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTI1VDEyOjAyOjAwLjI2NTA2OCIsInVzZXJfaWQiOiJkOTQ0MzI3MC1lZWVkLTRjNDAtOTY0ZS1hMzRhZjAzYWJlODcifQ.tFRxr_nBJf_CqGsg3WUue7TWf_mNeSPlWd478uLcyrY'\
+  -H 'content-length: 415'\
+  -H 'content-type: application/json'\
+  -d '{"title":"Such message interesting fly spend yeah.","maxScore":59,"minScore":25,"description":"Able information maybe all available social. Get occur current night return lead mind.\nTravel television live follow sort. Me identify church history. Enough example single phone.","previewFileId":"88d6f0c8-f535-4bb4-a0ea-71828e410e6c","estimatedTime":"7 weeks","createdByUserId":"d9443270-eeed-4c40-964e-a34af03abe87"}'

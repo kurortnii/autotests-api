@@ -1,0 +1,11 @@
+curl -X 'POST'\
+  'http://localhost:8000/api/v1/courses'\
+  -H 'host: localhost:8000'\
+  -H 'accept: */*'\
+  -H 'accept-encoding: gzip, deflate'\
+  -H 'connection: keep-alive'\
+  -H 'user-agent: python-httpx/0.28.1'\
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTI1VDEyOjU3OjI2LjE4MTA5MyIsInVzZXJfaWQiOiIzNWY4Y2IzYS0wZTVhLTRkYWEtYmZlZS0wNDU0MjUzNGI5MGYifQ.pIvEZxy2xhdi-In4TTN4fBE7VEKst92T-ndpH4JE3OU'\
+  -H 'content-length: 375'\
+  -H 'content-type: application/json'\
+  -d '{"title":"Weight film decade plant laugh evening.","maxScore":68,"minScore":22,"description":"Strong region rule ok way laugh people defense. Whether behavior position account yet hour majority son. Fear also should issue truth happen.","previewFileId":"8652b9fa-85c5-4714-b3dc-a74e8827159b","estimatedTime":"9 weeks","createdByUserId":"35f8cb3a-0e5a-4daa-bfee-04542534b90f"}'

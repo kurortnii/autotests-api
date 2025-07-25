@@ -1,0 +1,11 @@
+curl -X 'PATCH'\
+  'http://localhost:8000/api/v1/exercises/4cd5d5dd-b45a-4631-9d5d-98cac47de97f'\
+  -H 'host: localhost:8000'\
+  -H 'accept: */*'\
+  -H 'accept-encoding: gzip, deflate'\
+  -H 'connection: keep-alive'\
+  -H 'user-agent: python-httpx/0.28.1'\
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTI1VDEyOjU3OjI3LjIwNzAxNCIsInVzZXJfaWQiOiIxM2ZlY2Q0NC1iZjI5LTQ3OTItYWZiYS0xOTBhNjRiYmQ3NzUifQ.Xhk7ui1PYHyovTLpSifZI75d2SMwcfqoBfxqHJRcbGw'\
+  -H 'content-length: 317'\
+  -H 'content-type: application/json'\
+  -d '{"title":"Peace case across tree.","maxScore":62,"minScore":23,"orderIndex":45,"description":"Star nation friend might throughout. Maybe many article growth you. Western others job resource hit main draw.\nWar beautiful wonder treatment argue begin. Send wish professional on quality fund.","estimatedTime":"5 weeks"}'

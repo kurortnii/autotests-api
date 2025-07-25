@@ -1,0 +1,11 @@
+curl -X 'POST'\
+  'http://localhost:8000/api/v1/exercises'\
+  -H 'host: localhost:8000'\
+  -H 'accept: */*'\
+  -H 'accept-encoding: gzip, deflate'\
+  -H 'connection: keep-alive'\
+  -H 'user-agent: python-httpx/0.28.1'\
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTI1VDExOjM0OjAxLjY3NTcwOCIsInVzZXJfaWQiOiI2MjAxMDZhNy0xMmQ5LTRjZjctYTYxYS05YWFhZTBjMjYyNDkifQ.YwpWUQFxL9razoA7DiU0V3HBQpuum5SWzBYDP_DrVeA'\
+  -H 'content-length: 340'\
+  -H 'content-type: application/json'\
+  -d '{"title":"Worry read network meet join begin.","courseId":"28aa78a3-8950-4cb5-8c45-ea47226608d7","maxScore":69,"minScore":9,"orderIndex":78,"description":"What change traditional move around interview citizen. People usually space space.\nPaper money half these. Lead visit southern fall daughter stand national.","estimatedTime":"7 weeks"}'

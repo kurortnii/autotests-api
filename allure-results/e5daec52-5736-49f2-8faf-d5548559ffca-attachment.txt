@@ -1,0 +1,11 @@
+curl -X 'POST'\
+  'http://localhost:8000/api/v1/courses'\
+  -H 'host: localhost:8000'\
+  -H 'accept: */*'\
+  -H 'accept-encoding: gzip, deflate'\
+  -H 'connection: keep-alive'\
+  -H 'user-agent: python-httpx/0.28.1'\
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTI1VDEyOjU3OjI3LjIwNzAxNCIsInVzZXJfaWQiOiIxM2ZlY2Q0NC1iZjI5LTQ3OTItYWZiYS0xOTBhNjRiYmQ3NzUifQ.Xhk7ui1PYHyovTLpSifZI75d2SMwcfqoBfxqHJRcbGw'\
+  -H 'content-length: 410'\
+  -H 'content-type: application/json'\
+  -d '{"title":"Wait experience hear within on.","maxScore":88,"minScore":13,"description":"Left safe help soldier between goal. Alone buy science bed black old hear.\nPull idea shake ok kid seem. Tell while recently piece success similar. Professor consumer turn right think.","previewFileId":"c25d49ec-0f40-4ae9-9c18-cbb4f741e48a","estimatedTime":"9 weeks","createdByUserId":"13fecd44-bf29-4792-afba-190a64bbd775"}'

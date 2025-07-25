@@ -1,0 +1,11 @@
+curl -X 'POST'\
+  'http://localhost:8000/api/v1/courses'\
+  -H 'host: localhost:8000'\
+  -H 'accept: */*'\
+  -H 'accept-encoding: gzip, deflate'\
+  -H 'connection: keep-alive'\
+  -H 'user-agent: python-httpx/0.28.1'\
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTI1VDEyOjU3OjI1LjY2MjY5MSIsInVzZXJfaWQiOiI0YTBjODhiMi04YWNlLTRmNTAtODZmOS03M2ZkNDliMDMwY2EifQ.WwPURRwhN3lt-fubxYVZaXuUFIg55N-g4_XScK1Ml0Y'\
+  -H 'content-length: 337'\
+  -H 'content-type: application/json'\
+  -d '{"title":"Strong like so budget.","maxScore":82,"minScore":4,"description":"Bank moment evening meeting never TV. Structure lot your bag sing discover pull. Born before human expert deal option up.","previewFileId":"6f4e0ca2-7460-4fe7-a7db-ea2fbc635ebe","estimatedTime":"7 weeks","createdByUserId":"4a0c88b2-8ace-4f50-86f9-73fd49b030ca"}'

@@ -1,0 +1,11 @@
+curl -X 'POST'\
+  'http://localhost:8000/api/v1/courses'\
+  -H 'host: localhost:8000'\
+  -H 'accept: */*'\
+  -H 'accept-encoding: gzip, deflate'\
+  -H 'connection: keep-alive'\
+  -H 'user-agent: python-httpx/0.28.1'\
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTI1VDEyOjU3OjI4LjI0Mjk0MyIsInVzZXJfaWQiOiJhNzc1NTQ1Ni04ZjRjLTRkMGEtODllZi0zYWU2Y2M4NjM4MDkifQ.MkXZfPFt6JewrNqb46JZR6bLRtSESvisGcOfChfm-MM'\
+  -H 'content-length: 380'\
+  -H 'content-type: application/json'\
+  -d '{"title":"Room none various teacher.","maxScore":97,"minScore":4,"description":"Like set of. Series hot who goal blue.\nSignificant success modern finish finally call. Quality necessary he true sound actually. Stage manager data skill fall.","previewFileId":"19abb74b-f8da-44b7-9ddb-5786091ce4d7","estimatedTime":"3 weeks","createdByUserId":"a7755456-8f4c-4d0a-89ef-3ae6cc863809"}'

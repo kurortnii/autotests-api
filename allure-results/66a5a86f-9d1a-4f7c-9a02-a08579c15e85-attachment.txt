@@ -1,0 +1,11 @@
+curl -X 'PATCH'\
+  'http://localhost:8000/api/v1/courses/b5d946b3-d0af-4a1b-88c2-1717921c713d'\
+  -H 'host: localhost:8000'\
+  -H 'accept: */*'\
+  -H 'accept-encoding: gzip, deflate'\
+  -H 'connection: keep-alive'\
+  -H 'user-agent: python-httpx/0.28.1'\
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTI1VDExOjMyOjI4LjE4NzUxMCIsInVzZXJfaWQiOiIzMTMyZWQyMy00OTZiLTRhOWItYmIxNi04MGEyZTViOWJmZjcifQ.n8KCwxQnGItGa7lAZxlBhyjH2Dw4OfTGGcJqO2uEwvA'\
+  -H 'content-length: 252'\
+  -H 'content-type: application/json'\
+  -d '{"title":"Newspaper station hit floor memory since enjoy place.","maxScore":51,"minScore":8,"description":"Reason religious lay form.\nReflect song serve order think. Production scientist thing they box prove share pressure.","estimatedTime":"1 weeks"}'

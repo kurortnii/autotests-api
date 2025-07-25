@@ -1,0 +1,11 @@
+curl -X 'POST'\
+  'http://localhost:8000/api/v1/courses'\
+  -H 'host: localhost:8000'\
+  -H 'accept: */*'\
+  -H 'accept-encoding: gzip, deflate'\
+  -H 'connection: keep-alive'\
+  -H 'user-agent: python-httpx/0.28.1'\
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTI1VDExOjM0OjAxLjE2MzA1NyIsInVzZXJfaWQiOiI5MTkxYmY0Ni01ZTRjLTQ0MWUtOTA2Ny0yMmE3Y2FmZDk1NTkifQ.wWqj_zUfsBcydHTPLQwFofqr4xbX74G3ujXqq-PBhCM'\
+  -H 'content-length: 417'\
+  -H 'content-type: application/json'\
+  -d '{"title":"Low later five thousand.","maxScore":88,"minScore":5,"description":"May ready picture husband billion put. Pressure fear city go. Adult same remember push establish hear.\nRepublican positive deal. Authority key road future natural. Yet talk whose oil history couple.","previewFileId":"abb8cf76-1f1d-4f25-aeef-787a5d6e2707","estimatedTime":"8 weeks","createdByUserId":"9191bf46-5e4c-441e-9067-22a7cafd9559"}'

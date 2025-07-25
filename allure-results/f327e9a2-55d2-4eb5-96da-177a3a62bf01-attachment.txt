@@ -1,0 +1,11 @@
+curl -X 'POST'\
+  'http://localhost:8000/api/v1/courses'\
+  -H 'host: localhost:8000'\
+  -H 'accept: */*'\
+  -H 'accept-encoding: gzip, deflate'\
+  -H 'connection: keep-alive'\
+  -H 'user-agent: python-httpx/0.28.1'\
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTI1VDExOjM0OjAwLjYzOTA1NyIsInVzZXJfaWQiOiJiYmZiZTQ4OC1mNzMxLTQ1MWMtYTUzYS03MjQ1ZDA1MmY5MjEifQ.rHJELv5T0sOVFpIRi6aHqzaCttAhWz8mNHTftFe4wMc'\
+  -H 'content-length: 395'\
+  -H 'content-type: application/json'\
+  -d '{"title":"Wear alone machine.","maxScore":58,"minScore":1,"description":"Close opportunity under where fish decade country recently. Them amount wrong never send.\nOpen film once inside student field skin. Decision history apply. Gun maybe yourself owner.","previewFileId":"e5a55152-cd0c-4a24-99b6-2d0bf88d6316","estimatedTime":"4 weeks","createdByUserId":"bbfbe488-f731-451c-a53a-7245d052f921"}'

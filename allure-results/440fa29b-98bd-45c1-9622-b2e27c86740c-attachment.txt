@@ -1,0 +1,11 @@
+curl -X 'POST'\
+  'http://localhost:8000/api/v1/courses'\
+  -H 'host: localhost:8000'\
+  -H 'accept: */*'\
+  -H 'accept-encoding: gzip, deflate'\
+  -H 'connection: keep-alive'\
+  -H 'user-agent: python-httpx/0.28.1'\
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTI1VDExOjMzOjU5LjYwMjI4OSIsInVzZXJfaWQiOiI1ZWY4NDZjMy0wNzQ0LTQ1MmQtOThmYS0xMWQ2NDBkM2FmM2IifQ.DTQuGdtJ_RW9lYXUSXOYPenprxD3q98LxIJkc0RVe7w'\
+  -H 'content-length: 327'\
+  -H 'content-type: application/json'\
+  -d '{"title":"Bar phone clearly conference serve.","maxScore":74,"minScore":16,"description":"Wear really number performance. Do state small letter. Debate mission control if decade without.","previewFileId":"e04c4bfd-98da-4e76-b622-2d6495cbb9be","estimatedTime":"10 weeks","createdByUserId":"5ef846c3-0744-452d-98fa-11d640d3af3b"}'
