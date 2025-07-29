@@ -5,6 +5,7 @@ from clients.api_client import APIClient
 from clients.authentication.authentication_schema import LoginRequestSchema, RefreshRequestSchema, LoginResponseSchema
 # импортируем билдер
 from clients.public_http_builder import get_public_http_client
+from tools.routes import APIRoutes
 
 
 class AuthenticationClient(APIClient):
@@ -19,7 +20,7 @@ class AuthenticationClient(APIClient):
         :param request: словарь с email и password
         :return: ответ от сервера с виде объекта httpx.Response
         """
-        return self.post("/api/v1/authentication/login",
+        return self.post(f"{APIRoutes.AUTHENTICATION}/login",
                          json=request.model_dump(by_alias=True))
 
     @allure.step("Refresh authentication token")
@@ -30,7 +31,7 @@ class AuthenticationClient(APIClient):
         :param request: словарь с refreshToken
         :return: ответ от сервера в виде объекта httpx.Response
         """
-        return self.post("/api/v1/authentication/refresh",
+        return self.post(f"{APIRoutes.AUTHENTICATION}/refresh",
                          json=request.model_dump(by_alias=True))
 
     def login(self, request: LoginRequestSchema) -> LoginResponseSchema:
